@@ -1,0 +1,180 @@
+
+*********************Selenium Class03******************************
+
+Locators:
+-----------------------------------Absolute Xpath-------------------------------
+Xpath :
+ 1.Absolute
+ 2.Relative
+
+
+ Absolute Xpath:
+                starts with starting node html and then you proceed in the hierarchy
+
+                Absolute:
+                1)Absolute xpath starts from root node.
+                2)Absolute  xpath start with /
+                3)in absolute xpath we use only tags/nodes
+
+Example:
+<html>
+    <head>
+        <title>My Web</title>
+    </head>
+    <body>
+        <button>Press ME</button>
+ 		<input> text</input>
+        <div>
+ 			<input>box</input>
+ 		</div>
+ 		<div>
+            <input>box</input>
+        </div>
+    </body>
+</html>
+
+
+Answer:
+/html/body/div[2]/input
+
+
+reasons not used often:
+1.too long, complicated
+2.If there is any addition web elements or removed any web elements  in the hirearchy, then  the path won't be valid any more
+
+
+
+----------------------------------------------Relative Xpath----------------------------------------
+
+relative xpath:
+in releative xpath, we don't have to naviage through hirearchy . it will directly moves to the desire path on DOM.
+1)Relative xpath direclty jump to elements on DOM()
+2)Relative xpath start with //
+3)In Relative xpath we use attributes
+
+Syntax for relative xpath:
+1.-----Xpath to identify by attribute------
+//tagname[@attribute='attribute value']
+
+english :get me the 'tagname'  which has  an 'attribute' whose value is 'attribute value'
+
+
+Example:
+
+<input id="box",class="white">box</input>
+
+xpath:
+//input[@id='box']
+
+english :get me the tag "input" which has an attribute "id" whose value is "box"
+
+
+2.-----Xpath to identify by text------
+//tagname[text() = 'text value']
+
+english: get me the tagname which has text that is "text value"
+
+example:
+//a[text()='Forgotten password?']
+
+english: get the tag a which has a text that is "forgotten password?"
+
+
+3.----Xpath to identify by contains Method------
+
+****for attributes****
+//tagname[contains(@attribute, 'partial attribute value')]
+
+english :
+get me the tag name  which has the attribute and the attribute value contains "the partial value"
+
+Example:
+//button[contains(@type , 'sub')]
+
+english : get me the tag button which has the attribute and the attribute value contains "sub"
+
+use case:
+1.long attribute value
+2. some part is dynamic of the attribute value   id="textBoxhighlighted125" we can simply skip the part that is dynamic
+
+
+****for text****
+//tagname[contains(text(), 'partial text value')]
+
+example:
+//a[contains(text(),'Forgot')]
+
+english:get me the tag button which has the text and the text  value contains "Forgot"
+
+4.-----Xpath to identify by starts with------
+
+Syntax:
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+
+example:
+//input[starts-with(@name,'pa')]
+
+difference between contain and start
+
+contain --->text contains anywhere
+starts --->at the begnning.
+
+===========================================================================================================================================================================================
+
+
+css(castcating stylish sheet) selector combination
+Note: Tag is optional.
+in css selector we can use different combination to find the web elements.
+it's basically customized.
+Tag and ID (or) we can use like #id
+Tag and class (or) we can use like .class
+Tag and attribute (or)[attribute=value]
+Tag class, & attribute.
+===========================================
+what is xpath?
+xpath is defined as XML Path.
+
+type of xpath?
+1)Absolute xpath/full path --> start from the root, we have navigate each node, we won't use attribute
+/html/body/div[1]/div/div[3]/div[1]/img
+2)Relative xpath/partial xpath
+//*[@id="divlogo"]/img.
+
+Diff between Absolute & relative xpath
+Absolute:
+1)Absolute xpath starts from root node.
+2)Absolute  xpath start with /
+3)in absolute xpath we use only tags/nodes
+relative xpath:
+1)Relative xpath direclty jump to elements on DOM()
+2)Relative xpath start with //
+3)In Relative xpath we use attributes
+
+syntax  of Relative  xpath:
+
+//tagname[@attribute='value']
+//*[@attribute='value']
+
+
+how to capture xpath? there are multiple  way we can caputer
+1) right click on elements --->Inspect-->Highlight html--->Right click-->copy xpath or copy full xpath.
+2)chropath extension
+3)selectorsHub
+both 2 & 3 are extension which is available for chrome and firefox
+=================
+Which xpath is perfered? why?
+relative xpath is perfered, because if any elements changed or reomved then the connection will missed,so relative
+path is perfered one.
+==============================================
+xpath options:
+
+or
+and
+contains()
+starts-with()
+text()
+chained xpath
+
+===========================================
+
+
