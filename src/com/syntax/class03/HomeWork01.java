@@ -20,13 +20,14 @@ quit the browser
         WebDriver driver= new ChromeDriver();
         driver.get("http://syntaxprojects.com/");
         driver.manage().window().maximize();
-        Thread.sleep(3000);
+        Thread.sleep(3000); //added sleep time for the new window to load
         //Click on start practicing
         driver.findElement(By.xpath("//a[@id='btn_basic_example']")).click();
         Thread.sleep(3000);
         //click on simple form demo
-        driver.findElement(By.xpath("//a[contains(@class,'list-group')]")).click();
-        Thread.sleep(3000);
+      //  driver.findElement(By.xpath("(//a[text()='Simple Form Demo'])[2]")).click(); //note we can use index only if we don't have any choices . Index may get changed later on, as new lines may introduced.
+        Thread.sleep(3000); //line 28 and 30 will provide same output, but 30 is perfered
+        driver.findElement(By.xpath("//a[@class='list-group-item' and @href='basic-first-form-demo.php']")).click();
         driver.findElement(By.xpath("//input[starts-with(@id,'user')]")).sendKeys("Hello Everyone");
         //click on show message
         driver.findElement(By.xpath("//button[contains(text(),'Show')]")).click();

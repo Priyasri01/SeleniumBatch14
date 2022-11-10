@@ -46,7 +46,7 @@ reasons not used often:
 
 ----------------------------------------------Relative Xpath----------------------------------------
 
-relative xpath:
+Relative xpath:
 in releative xpath, we don't have to naviage through hirearchy . it will directly moves to the desire path on DOM.
 1)Relative xpath direclty jump to elements on DOM()
 2)Relative xpath start with //
@@ -122,14 +122,21 @@ starts --->at the begnning.
 ===========================================================================================================================================================================================
 
 
-css(castcating stylish sheet) selector combination
+css(Cascading stylish sheet) selector combination
 Note: Tag is optional.
-in css selector we can use different combination to find the web elements.
-it's basically customized.
-Tag and ID (or) we can use like #id
-Tag and class (or) we can use like .class
-Tag and attribute (or)[attribute=value]
-Tag class, & attribute.
+in css selector can accept  multiple combination to find the web elements.
+it's basically customized locator.
+
+1)Tag and ID (or) we can use just ID ,like #id
+note: Tag is optional  and for id we always want to put #. # --> represent the ID
+
+2)Tag and class (or) we can use just class, like .class
+note:Tag is optional  and for class we always want to put "dot". .--> represent the Class
+
+3)Tag , class and attribute (or) we can use just attribute , like [attribute=value]
+Tag, class, & attribute.
+note : sometime we  will see tag and class will carry same webelements , so in that senario we can have this combination .
+for more details: check "Practice" Package in CSSDemo class
 ===========================================
 what is xpath?
 xpath is defined as XML Path.
@@ -176,5 +183,19 @@ text()
 chained xpath
 
 ===========================================
+
+what is inside the jar?
+    The method we call  all are inside jar/library.
+========================================
+what is purpose of Threads.sleep?
+before closing wait for milli seconds.
+=====================================================
+what does  navigate() and get() do.
+both will open the webpage, based on the url passed on the parameter. but
+
+what is the disadvantage of using  navigate() ?
+
+The navigate is not going wait for the web application or web page to loaded fully,
+where as get() will wait for the  whole application to open up/load up fully.
 
 

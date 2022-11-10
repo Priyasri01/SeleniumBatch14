@@ -1,0 +1,43 @@
+what are Browser Specific Commands:
+
+-Maximaize window
+-Delete cookies
+-Get
+-GetTitle
+-GetCurrentUrl
+-GetPageCource
+-close
+-Quit
+======================================================================================
+Browser Navigation commands
+
+-Navigate to
+-Backward
+-Forward
+-Refresh
+============================================================================
+Web Elements commands are:
+
+1)SendKeys()
+   Description:--->This simulates typing into an elements, which may set its value.
+   Accepts Parameter--->Accepts charsequence as a parameter.
+   Returns Nothing.
+
+2)Clear()
+    Description:--->if this elements is a text entry elements, this will clear the value which present inside the field.
+    Accepts Parameter--->Accepts not as prameter.
+    Returns Nothing.
+
+ 3)click()
+ 4)getText();
+ 5)isSelected();
+ 6)isEnabled();
+ 7)isDisplayed();
+ 8)getSize();
+ 9)getCSSValue();
+ 10)getLocation();
+ 11)getAttribute();
+ 12)getTagName();
+
+============================================================
+find element---> get u the first encountered web

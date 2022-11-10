@@ -48,24 +48,29 @@ what is the value of the attribute id --> answer: "Butn"
 
 ----------------------------Locators----------------------------------
 Locators:
-locators help us find a particular webElement on the page
-locators are addresses that identify a webElements uniquely within  page.
+locators help us find a particular webElement on the  webpage
+locators are addresses that identify a
+ webElements uniquely within  page.
 - ID
 - Name
-- ClassName
 - linktext
 - partialLinkText
 - Tagname
+- ClassName
 - xpath
 - CSS Selector
 
+note: className and Tagname can be used for find single elements,
+but most of the time we used for find muitiple elements.
+more details, check on "practice" package in LocatorDemo class
 the purpose of having multiple locators is because
 some tags might not have an id (u can use another locator)
 
 two webElements have a common locator  (e.g  <input id="box" ,name="textbox"/>
  											, <input id="box",class= "btn" )
 
-
+Different between finElment and findElements?
+ findElement method  will return  single webelement. whereas in findElments method can return  multiple webelements.
 ----------------------------------DOM-------------------------
 What is DOM?
 DOM stands for Document Object Model. It is the browser's
@@ -125,6 +130,6 @@ close the browser
 2.linktext--->only when we have a link tag <a> and it has some text
 3.partail and link text --> using partial u can enter just a part of the text
 4.if there is numbers in the value of the locators .. should u use it? (avoid it)
-5.No such element element -->1.the locator is wrong, 2. the element is on the page
+5.No such element element -->1.the locator is wrong, 2. the element is not on the page
 6 send the text and perform click operation
 
