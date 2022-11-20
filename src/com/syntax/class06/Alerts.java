@@ -9,42 +9,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Alerts {
     public static void main(String[] args) throws InterruptedException {
 
-
-        // set the path to the driver to link it with our class    on mac u dont need .exe on windows u need .exe
+        //       setting up the webDriver
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-        // create a WebDriver instance
+//        create an instance
         WebDriver driver= new ChromeDriver();
-     //  goto syntax project /checkbox demo
-        driver.get("https://syntaxprojects.com/javascript-alert-box-demo.php");
-    //  maximize
-        driver.manage().window().maximize();
+//        open the demoqa Alerts
+        driver.get("https://demoqa.com/alerts");
 
-        //find the button click me for the alert and click on it.
-      WebElement simpleAlert = driver.findElement(By.xpath("//button[@onclick='myAlertFunction()']"));
-      simpleAlert .click();
-      Thread.sleep(3000);
-      //Handling the simple Alert
-        Alert simpleAlert1 = driver.switchTo().alert(); //switch focus to alert page
-        simpleAlert1.accept(); // since it's simple alert  we just accepted, because we don't have another choice than accept.
+//        click on the button
+                WebElement alertBtn1 = driver.findElement(By.xpath("//button[@id='alertButton']"));
+        alertBtn1.click();
+        Thread.sleep(2000);
+//Assign reference varaible "Alert1"  so that we can reuse it in the code alert interface
+        Alert Alert1 = driver.switchTo().alert();
+        Alert1.accept();
 
-        //find the button for confirmation alert and click on it.
-        WebElement confirmationAlert = driver.findElement(By.xpath("//button[@onclick='myConfirmFunction()']"));
-        confirmationAlert.click();
+//     alert btn 3
+        WebElement alertBtn3 = driver.findElement(By.xpath("//button[@id='promtButton']"));
+        alertBtn3.click();
 
-        ///Handling the confirmation Alert
-        Alert confirmationAlert1 = driver.switchTo().alert(); //Switch focus to Alert confirmation page
-        confirmationAlert1.dismiss();// since it's confirmation alert, we have two choice either we have to accept or we dismiss. based on the requirement we can use it
-
-        //find the button prompt alert and click on it.
-          WebElement PromptAlert   = driver.findElement(By.xpath("//button[@onclick='myPromptFunction()']"));
-          PromptAlert.click();
-          //Handling prompt alert
-        Alert PromptAlert1= driver.switchTo().alert();//Switch focus to Prompt Alert page
-        PromptAlert1.sendKeys("abradabra"); // since it's prompt alert, we don't have any choice we have to send a text and we have to accept inorder to close the alert page
-        simpleAlert1.accept();
-
-
-
+//   reusing the alert already declared in line item 24. it is possible to reuse it because in every web page will have single alert page at time.
+//   and also we store the general syntax which is used to switch the control from current page to alert page (driver.switchTo().alert();). so can we reuse it multiple of times
+        Alert1.sendKeys("abracadbra");
+        Alert1.accept();
 
     }
 }
+

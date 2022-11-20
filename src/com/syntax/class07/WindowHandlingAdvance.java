@@ -22,7 +22,9 @@ public class WindowHandlingAdvance {
         WebElement privacy= driver.findElement(By.xpath("//a[text()='Privacy']"));
         privacy.click();
 
-        // the title of my desired page is    Google Account Help
+
+     /*my title of my desired page is "Google Account Help"---> this tile i getting manually(by just going to the page
+insecpt under DOM 1)cntrl+f 2) typed "//title" copied the title and paste it here */
 
 //        get all the window handles
         Set<String> allHandles = driver.getWindowHandles();

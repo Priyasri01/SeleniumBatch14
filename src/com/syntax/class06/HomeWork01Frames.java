@@ -10,6 +10,10 @@ import java.util.List;
 
 public class HomeWork01Frames {
     public static void main(String[] args) {
+     /*   1.check the checkBox
+        2.Select BabyCat from drop dwon
+        3. Send text in text box "DONE"
+                */
 
         // set the path to the driver to link it with our class    on mac u dont need .exe on windows u need .exe
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
@@ -29,7 +33,7 @@ public class HomeWork01Frames {
       WebElement checkBox  =driver.findElement(By.xpath("//input[@id='a']"));
      checkBox.click();
 
-     //back to main frame
+     //back to main frame/Home Content
         driver.switchTo().defaultContent();
 
         //switch from main page to other frame by using index
