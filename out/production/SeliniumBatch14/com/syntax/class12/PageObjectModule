@@ -1,0 +1,20 @@
+what we have in pages pacakage?
+
+we have all web element and for each individual page and we create different class for find the web element for each page.
+ex: for login will have seperate class and for DashBoard will seperate class and so on. and these falls under package.
+
+what will have in Util pagakge?
+
+commonMethods class in which will have the below common methods/Functions
+
+will have Public staic Webdriver driver;
+openBrowserWithUrl(String url)
+CloseBrowser();
+ScreenShot();
+switchFrame();
+
+what we have in Test Package?
+
+will have different class for each pages in website like loginClass, DashBoardclass , employeeClass and so on..
+
+

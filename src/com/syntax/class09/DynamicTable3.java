@@ -54,10 +54,10 @@ Hum@nhrm123
 
 
             String allPeople=alllist.get(i).getText();
-            int row=i+1;
+
 
             if(allPeople.contains("Employee")){
-
+                int row=i+1;
 //table[@id='resultTable']/tbody/tr[38]/td[1]
 
                  //System.out.println("Syntax employe's  -->" +allPeople);

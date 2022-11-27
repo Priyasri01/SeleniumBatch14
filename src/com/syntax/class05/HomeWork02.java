@@ -45,6 +45,7 @@ public class HomeWork02 {
          if(text.equalsIgnoreCase("Computers/Tablets & Networking")){
 
             itemlist.selectByIndex(i);
+
          }
      }
         Thread.sleep(5000);
